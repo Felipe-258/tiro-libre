@@ -27,7 +27,7 @@ class RoomFactory extends Factory
 
         return [
             'id_turn' => $turnId,
-            'name' => $this->faker->unique()->word(),
+            'name' => $this->faker->unique()->colorName(),
             'quantity' => $this->faker->numberBetween(1, 100),
             'max' => $this->faker->numberBetween(1, 100),
             'description' => $this->faker->paragraph(),

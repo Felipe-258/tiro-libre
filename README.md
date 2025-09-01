@@ -124,7 +124,7 @@ A continuación se muestra un diagrama simple de la arquitectura de Tiro Libre:
 6. **Ejecuta migraciones y seeders (opcional):**
    ```bash
    php artisan migrate
-   # Para datos de prueba:
+   # Para datos de prueba (Recomendado):
    php artisan migrate:refresh --seed
    ```
 
@@ -156,19 +156,23 @@ A continuación se muestra un diagrama simple de la arquitectura de Tiro Libre:
 
 ## 🧪 Credenciales de Prueba
 
-> _Agrega aquí credenciales de prueba si están disponibles, por ejemplo:_
-- **Administrador:** admin@tirolibre.com / password123
-- **Canchero:** canchero@tirolibre.com / password123
-- **Jugador:** jugador@tirolibre.com / password123
+> _Credenciales de prueba:_
+- **Administrador:** admin@example.com / 12345678
+- **Canchero:** canchero@example.com / 12345678
+- **Jugador:** jugador@example.com / 12345678
 
 ---
 
 ## 📸 Capturas de Pantalla
 
-<!-- Agrega aquí imágenes o GIFs del sistema funcionando -->
 > _Ejemplo:_
-> ![Pantalla de inicio](./docs/screenshots/home.png)
-> ![Panel de administración](./docs/screenshots/admin.png)
+> ![Pantalla de Inicio Jugador](./docs/home-jugador.png)
+> ![Pantalla de Inicio Canchero](./docs/home-canchero.png)
+> ![Pantalla de Alquilar Cancha](./docs/cancha.png)
+> ![Pantalla de Alquilar Cancha Oscuro](./docs/cancha-oscuro.png)
+> ![Pantalla de Solicitudes Pendientes](./docs/solicitudes-pendientes.png)
+> ![Pantalla de Mapa](./docs/mapa.png)
+
 
 ---
 
@@ -182,9 +186,18 @@ A continuación se muestra un diagrama simple de la arquitectura de Tiro Libre:
 
 ## 📄 Licencia
 
-> _Incluye aquí la licencia del proyecto, por ejemplo:_
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
+Este proyecto está bajo una Licencia de Uso Educativo. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
 
----
+**Permisos:**
+- ✅ Uso educativo y académico
+- ✅ Investigación y estudio
+- ✅ Modificación y distribución para fines educativos
+
+**Restricciones:**
+- ❌ Uso comercial o profesional
+- ❌ Implementación en producción sin autorización
+- ❌ Distribución con fines de lucro
+
+Para uso comercial o profesional, por favor contacta al equipo de desarrollo para obtener una licencia apropiada.
 
 ¡Gracias por tu interés en Tiro Libre! Si tienes preguntas o sugerencias, no dudes en contactarnos.

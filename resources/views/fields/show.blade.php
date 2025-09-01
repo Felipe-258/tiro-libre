@@ -46,7 +46,7 @@
                                 {{-- <video loop autoplay width="390px">
                                     <source src="{{ URL::asset('no-hay-fotos-aun.mp4') }}" type="video/mp4">
                                 </video> --}}
-                                <img src="{{ URL::asset('no-hay-fotos-aun.png') }}" alt="" width="600px">
+                                <img src="{{ URL::asset('no-hay-fotos-aun.png') }}" alt="" width="500px">
                             </div>
                         @endif
                     </div>

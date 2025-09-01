@@ -17,21 +17,21 @@
                 </div>
                 <div class="team-container">
                     <div class="team-member">
-                        <a href="https://open.spotify.com/show/7Gw9T9Yg4JkDszJKjehvwT?si=b2d9984dad4a4341" target="_blank">
+                        <a href="https://github.com/Felipe-258" target="_blank">
                             <img src="{{ asset('team/feli-circle.png') }}" alt="Feli">
                         </a>
                         <p>Franco Felipe</p>
                         <p>Desarrollador</p>
                     </div>
                     <div class="team-member">
-                        <a href="https://www.instagram.com/_facuujara_/" target="_blank">
+                        <a href="https://github.com/P2jaraFacundo" target="_blank">
                             <img src="{{ asset('team/facu-circle.png') }}" alt="Facu">
                         </a>
                         <p>Jara Facundo</p>
                         <p>Desarrollador</p>
                     </div>
                     <div class="team-member">
-                        <a href="https://www.instagram.com/federico.martinolich/" target="_blank">
+                        <a href="https://github.com/FedericoMartinolich" target="_blank">
                             <img src="{{ asset('team/fede-circle.png') }}" alt="Fede">
                         </a>
                         <p>Martinolich Federico</p>
