@@ -1,47 +1,190 @@
-![Tiro Libre Logo](\public\logos\logo tiro-libre square.png)
+# ⚽ Tiro Libre: Plataforma Integral para Alquiler de Canchas
 
-# Tiro Libre
+Tiro Libre es una solución digital moderna que conecta a jugadores y propietarios de canchas, facilitando la reserva, gestión y promoción de espacios deportivos. Nuestra misión es digitalizar la experiencia de alquilar canchas, optimizando la organización de partidos y la búsqueda de compañeros de juego.
 
-Tiro Libre es una plataforma para alquilar canchas. Aquí, los cancheros publican sus canchas y los jugadores pueden buscar las mejores opciones para disfrutar con amigos, cuidar el bolsillo, salvar las distancias e incluso crear salas para encontrar nuevos jugadores y formar un equipo ganador. El programa permite tener distintos roles:
+---
 
-- **Jugador**: Puede alquilar, buscar canchas y armar salas para buscar jugadores.
-- **Canchero**: Puede publicar y promocionar su cancha, proporcionando información como ubicación, precio y número de teléfono.
-- **Administrador**: Capaz de modificar o cambiar aspectos críticos del sistema.
-- **Super Administrador**: Capaz de designar los roles de administrador.
+## 🚀 Descripción
 
-## Versiones
+Tiro Libre permite a los usuarios buscar, reservar y administrar canchas deportivas de manera sencilla y eficiente. Los propietarios pueden publicar y promocionar sus canchas, mientras que los jugadores encuentran las mejores opciones según ubicación, precio y disponibilidad. Además, la plataforma fomenta la creación de comunidades deportivas mediante la formación de equipos y salas de juego.
 
-- **Laragon Full**: 6.0 220916
-- **PHP**: 8.1.10
-- **MySQL**: 8.0.30
-- **Apache**: 2.4.54
-- **Heidi Portable**: 12.1.0.6537
+---
 
-# Instalación de Tiro Libre
+## ✨ Características Principales
 
-Para probar el proyecto de manera local, se debe tener instalado Laragon 6.0 y que las demás versiones coincidan para no tener inconvenientes.
+- Gestión de usuarios con roles diferenciados (Jugador, Canchero, Administrador, Super Administrador)
+- Autenticación y autorización segura
+- Publicación y promoción de canchas
+- Búsqueda avanzada de canchas por ubicación, precio y disponibilidad
+- Creación de salas para encontrar y sumar jugadores
+- Notificaciones automáticas (incluyendo integración con WhatsApp)
+- Panel de administración para gestión de datos críticos
+- Sistema de reservas y pagos
+- Soporte para múltiples dispositivos
 
-1. Descargar o clonar el proyecto.
-2. Copiar la carpeta `Reserva-Futbolera`.
-3. Renombrar el archivo `.env.example` a `.env` y modificarlo si es necesario.
-    - En tu archivo .env linea 21, colocar `QUEUE_CONNECTION=database`.
-4. Usando la terminal y teniendo `composer` instalado, navegar hasta el directorio.
-5. Ejecutar `composer install` (tomará un momento).
-6. Ejecutar `npm install`.
-7. Generar una 'application key' con `php artisan key:generate --ansi`.
-8. Ejecutar las migraciones con `php artisan migrate`.
-    - Opcional: si quieres tener datos de prueba, ejecutar `php artisan migrate:refresh --seed`.
-9. Ejecutar las migraciones con `php artisan storage:link`.  
-10. Ejecutar `npm run dev`.
-11. Si queres probar el envio de mensajes por whatsapp. Debes:
-    - Ejecutar `node resources/js/whatsapp/whatsapp.js ` 
-    - Ejecutar `php artisan queue:work`. Para ejecutar las notificaciones por whatsapp.
-12. Por último, iniciar el servidor local:
-    - Recomendamos hacerlo mediante el menú de Laragon:
-        - Menú
-        - WWW
-        - Reserva-Futbolera [http://reserva-futbolera.test]
-    - También se puede iniciar escribiendo `php artisan serve`:
-        - Con esto deberías abrir [http://127.0.0.1:8000].
+---
 
-¡Y eso es todo! Ahora puedes disfrutar de Tiro Libre en tu entorno local.
+## 🛠️ Tecnologías Utilizadas
+
+- **Backend:** [Laravel 10](https://laravel.com/) ![Laravel](https://img.shields.io/badge/Laravel-10.x-red?logo=laravel)
+- **Frontend:** Blade (Laravel), HTML5, CSS3, JavaScript ES6
+- **Lenguajes:** PHP 8.1 ![PHP](https://img.shields.io/badge/PHP-8.1-blue?logo=php), JavaScript ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+- **Base de datos:** MySQL 8 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql)
+- **Herramientas:** Composer, Node.js, NPM, SweetAlert2, FullCalendar, Axios
+- **Integraciones:** WhatsApp Web JS (para notificaciones automáticas)
+- **Servidor recomendado:** Laragon 6.0, Apache 2.4
+---
+
+## 🏗️ Arquitectura
+
+A continuación se muestra un diagrama simple de la arquitectura de Tiro Libre:
+
+```
+┌──────────────────────────────┐
+│        Usuario Final         │
+│ (Navegador Web/Dispositivo)  │
+└─────────────┬────────────────┘
+              │
+              ▼
+┌──────────────────────────────┐
+│         Frontend             │
+│  Blade (Laravel), JS, CSS    │
+└─────────────┬────────────────┘
+              │
+              ▼
+┌──────────────────────────────┐
+│          Backend             │
+│        Laravel 10            │
+│  (PHP, Controladores, Rutas, │
+│   Autenticación, Lógica)     │
+└─────────────┬────────────────┘
+              │
+              ▼
+┌──────────────────────────────┐
+│        Base de Datos         │
+│           MySQL              │
+└──────────────────────────────┘
+```
+
+**Descripción:**
+- El usuario interactúa con la aplicación web a través del navegador.
+- El frontend está construido con Blade (Laravel), HTML, CSS y JavaScript.
+- El backend utiliza Laravel 10 (PHP) para gestionar la lógica de negocio, autenticación, rutas y controladores.
+- Toda la información se almacena y consulta desde una base de datos MySQL.
+
+---
+
+## 🗃️ Estructura de la Base de Datos
+
+![Diagrama de Base de Datos](./docs/diagrama-bd.png)
+
+*Diagrama interactivo disponible en: [dbdiagram.io](https://dbdiagram.io/d/tiro-libre-68b5a733777b52b76c80ca67)*
+
+---
+
+## ⚙️ Instalación y Ejecución
+
+### Requisitos Previos
+
+- PHP >= 8.1
+- Composer
+- Node.js >= 16.x y NPM
+- MySQL >= 8.0
+- Laragon 6.0 (recomendado para entorno local)
+- Git
+
+### Pasos de Instalación
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/Felipe-258/tiro-libre.git
+   cd tiro-libre
+   ```
+
+2. **Instala dependencias de backend:**
+   ```bash
+   composer install
+   ```
+
+3. **Instala dependencias de frontend:**
+   ```bash
+   npm install
+   ```
+
+4. **Configura el entorno:**
+   - Copia `.env.example` a `.env`
+   - Modifica las variables según tu entorno (DB, correo, etc.)
+   - Asegúrate de tener `QUEUE_CONNECTION=database` en la línea correspondiente
+
+5. **Genera la clave de la aplicación:**
+   ```bash
+   php artisan key:generate --ansi
+   ```
+
+6. **Ejecuta migraciones y seeders (opcional):**
+   ```bash
+   php artisan migrate
+   # Para datos de prueba:
+   php artisan migrate:refresh --seed
+   ```
+
+7. **Crea el enlace de almacenamiento:**
+   ```bash
+   php artisan storage:link
+   ```
+
+8. **Levanta el frontend en modo desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+9. **Inicia el backend:**
+   - Con Laragon: desde el menú WWW selecciona el proyecto
+   - O manualmente:
+     ```bash
+     php artisan serve
+     ```
+
+10. **(Opcional) Notificaciones por WhatsApp:**
+    - Ejecuta:
+      ```bash
+      node resources/js/whatsapp/whatsapp.js
+      php artisan queue:work
+      ```
+
+---
+
+## 🧪 Credenciales de Prueba
+
+> _Agrega aquí credenciales de prueba si están disponibles, por ejemplo:_
+- **Administrador:** admin@tirolibre.com / password123
+- **Canchero:** canchero@tirolibre.com / password123
+- **Jugador:** jugador@tirolibre.com / password123
+
+---
+
+## 📸 Capturas de Pantalla
+
+<!-- Agrega aquí imágenes o GIFs del sistema funcionando -->
+> _Ejemplo:_
+> ![Pantalla de inicio](./docs/screenshots/home.png)
+> ![Panel de administración](./docs/screenshots/admin.png)
+
+---
+
+## 👥 Créditos al Equipo
+
+- [Felipe Franco](https://github.com/Felipe-258)
+- [Federico Martinolich](https://github.com/FedericoMartinolich)
+- [Facundo Jara](https://github.com/P2jaraFacundo)
+
+---
+
+## 📄 Licencia
+
+> _Incluye aquí la licencia del proyecto, por ejemplo:_
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
+
+---
+
+¡Gracias por tu interés en Tiro Libre! Si tienes preguntas o sugerencias, no dudes en contactarnos.
