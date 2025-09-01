@@ -165,7 +165,6 @@ A continuación se muestra un diagrama simple de la arquitectura de Tiro Libre:
 
 ## 📸 Capturas de Pantalla
 
-> _Ejemplo:_
 > ![Pantalla de Inicio Jugador](./docs/home-jugador.png)
 > ![Pantalla de Inicio Canchero](./docs/home-canchero.png)
 > ![Pantalla de Alquilar Cancha](./docs/cancha.png)
